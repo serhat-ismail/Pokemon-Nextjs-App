@@ -1,0 +1,11 @@
+.bench {
+    display: flex;
+    justify-content: center;
+}
+
+.bench img {
+    width: 20px;
+    height: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+}

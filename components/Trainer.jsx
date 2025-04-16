@@ -1,12 +1,13 @@
 import Image from "next/image";
 import bulbasaurImg from "../assets/bulbasaur.svg"
 import classes from "./Trainer.module.css"
+import PokeBench from "./PokeBench";
 
 export default function Trainer() {
     return <div className={classes.trainer}>
         <div>
             <p className={classes.trainerName}>Name</p>
-            <p className={classes["center-it"]}>Pokemon-Icons</p>
+            <PokeBench />
             <p className={classes["center-it"]}>
                 <button className={classes["center-it"]}>Pokemon-List</button>
             </p>

@@ -1,6 +1,6 @@
 .mainArena {
     width: 80vw;
-    height: 70vw;
+    height: auto;
     border-width: thick;
     border-color: white;
     background-color: #222222;
