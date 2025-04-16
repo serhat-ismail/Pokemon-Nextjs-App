@@ -1,8 +1,11 @@
-import classes from "./Trainer.module.css"
+import classes from "./HealthBar.module.css"
 
 export default function HealthBar() {
-    return <>
-        <p className={classes["center-it"]}>HP(200/200)</p>
-        <p className={classes["center-it"]}>Health Bar</p>
-    </>;
+    const currentHp = 90;
+    const maxHp = 200;
+
+    return <div className={classes.bar}>
+        <p>HP({currentHp}/{maxHp})</p>
+        <progress value={currentHp} max={maxHp} />
+    </div>;
 }

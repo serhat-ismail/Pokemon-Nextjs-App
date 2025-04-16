@@ -1,12 +1,10 @@
-import MainArena from "@/components/MainArena";
-import styles from "./page.module.css";
-import Footer from "@/components/Footer";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <MainArena />
-      <Footer />
-    </div>
+    <ol>
+      <li><Link href="./preview">Preview</Link></li>
+      <li><Link href="./arena">Arena</Link></li>
+    </ol>
   );
 }

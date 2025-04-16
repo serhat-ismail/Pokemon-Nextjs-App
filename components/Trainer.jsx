@@ -8,7 +8,7 @@ export default function Trainer() {
             <p className={classes.trainerName}>Name</p>
             <PokeBench max={6} />
             <p className={classes["center-it"]}>
-                <button className={classes["center-it"]}>Pokemon-List</button>
+                <button className={classes.pokeList}>Pokemon-List</button>
             </p>
         </div>
 

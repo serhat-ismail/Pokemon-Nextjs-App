@@ -9,6 +9,6 @@ export default function PokeBench({max}) {
     }
 
     return <div className={classes.bench}>
-        {numbers.map(number => <Image key={number} src={PokeballImg} />)}
+        {numbers.map(number => <Image key={number} src={PokeballImg} alt="Pokeball"/>)}
     </div>;
 }

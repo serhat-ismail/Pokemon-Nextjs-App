@@ -1,8 +1,12 @@
+import classes from "./Attacks.module.css"
+
 export default function Attacks() {
-    return <ul>
-        <li>Attack 1</li>
-        <li>Attack 2</li>
-        <li>Attack 3</li>
-        <li>Attack 4</li>
-    </ul>
+    return <div className={classes.attacks}>
+        <ul>
+            <li><button>Attack 1</button></li>
+            <li><button>Attack 2</button></li>
+            <li><button>Attack 3</button></li>
+            <li><button>Attack 4</button></li>
+        </ul>
+    </div>
 }

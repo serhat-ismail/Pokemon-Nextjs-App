@@ -1,0 +1,16 @@
+.bar {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.bar p {
+    display: flex;
+    justify-content: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.bar progress {
+    position: absolute;
+    width: 100%;
+}

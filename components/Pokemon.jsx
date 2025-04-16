@@ -7,8 +7,7 @@ import Attacks from "./Attacks";
 export default function Pokemon() {
     return <div>
         <HealthBar />
-        <Image src={bulbasaurImg} />
-
+        <Image src={bulbasaurImg} alt="test" />
         <Attacks />
     </div>;
 }
