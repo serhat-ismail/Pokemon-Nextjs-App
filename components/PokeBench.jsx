@@ -2,10 +2,9 @@ import Image from "next/image";
 import PokeballImg from "../assets/pokeball.svg"
 import classes from "./PokeBench.module.css"
 
-export default function PokeBench() {
-    const POKEMON_COUNT = 6;
+export default function PokeBench({max}) {
     const numbers = []
-    for (let i = 0; i <= POKEMON_COUNT; i++) {
+    for (let i = 0; i <= max - 1; i++) {
         numbers.push(i)
     }
 
