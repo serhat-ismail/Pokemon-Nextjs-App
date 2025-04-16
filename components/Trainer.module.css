@@ -1,0 +1,46 @@
+.trainer {
+    background-color: #333333;
+    margin: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1);
+    align-items: center;
+    justify-content: center;
+    /* gap: 0px; */
+}
+
+.trainer img {
+    width: 150px;
+    height: auto;
+    margin: 20px;
+}
+
+.trainer ul {
+    list-style-type: none;
+}
+
+.trainer li {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.trainer .trainerName {
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.trainer button {
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+.trainer .center-it {
+    display: flex;
+    justify-content: center;
+}
