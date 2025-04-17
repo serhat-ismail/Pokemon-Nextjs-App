@@ -1,0 +1,47 @@
+.attacks ul {
+    list-style-type: none;
+}
+
+.attacks li {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.attacks button {
+    font-family: 'Times New Roman', Times, serif;
+    width: 200px;
+    border-radius: 1%;
+    border-color: white;
+    margin: 2px;
+}
+
+.attacks button :hover{
+    background-color: #AAAAAA;
+}
+
+.attacks .fire{
+    background-color: red;
+}
+
+/* .attacks button :hover .fire{
+    background-color: red;
+}
+
+.attacks button :hover .fire{
+    background-color: red;
+}
+
+.attacks button :hover .fire{
+    background-color: red;
+}
+
+.attacks button :hover .fire{
+    background-color: red;
+} */
+
+.attacks .attack {
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
