@@ -2,8 +2,19 @@
 import { useQuery } from "@tanstack/react-query"
 import classes from "./Attacks.module.css"
 import { fetchAttacks } from "@/utils/http"
+import { useDispatch, useSelector } from "react-redux"
+import { turnActions } from "@/store/turn"
+import { useEffect, useState } from "react"
 
-export default function Attacks({trainerId, pokemonName}) {
+export default function Attacks({ trainerId, pokemonName }) {
+    const playerTurnId = useSelector(state => state.turn)
+    const dispatch = useDispatch();
+    const [isDisabled, setIsDisabled] = useState(playerTurnId.turn !== trainerId)
+
+    useEffect(() => {
+        setIsDisabled(playerTurnId.turn !== trainerId);
+    }, [playerTurnId, trainerId]);
+
     const { data, isFetching, isError, error } = useQuery({
         queryKey: ["attacks", pokemonName],
         queryFn: () => fetchAttacks(pokemonName),
@@ -17,8 +28,12 @@ export default function Attacks({trainerId, pokemonName}) {
             "duration": 0,
             "probability": 0,
             "attackElement": ""
-          }
+        }
     })
+
+    function handleAttack(pokemonAttack) {
+        dispatch(turnActions.changeTurn(trainerId))
+    }
 
     if (isFetching) {
         return <p>Is loading ...</p>
@@ -31,11 +46,15 @@ export default function Attacks({trainerId, pokemonName}) {
     return <div className={classes.attacks}>
         <ul>
             {data.map((pokemonAttack, index) => <li key={index}>
-                <button>
-                    <div className={classes.attack}>
-                        <p>{pokemonAttack.attackName}</p>
-                        <p>{pokemonAttack.damage}</p>
-                    </div>
+                <button onClick={() => handleAttack(pokemonAttack)} disabled={isDisabled} className={!isDisabled ? classes.activeButton : undefined}>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>{pokemonAttack.attackName}</td>
+                                <td>{pokemonAttack.damage}</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </button>
             </li>)}
         </ul>

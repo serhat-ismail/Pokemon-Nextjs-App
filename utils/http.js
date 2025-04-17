@@ -23,6 +23,5 @@ export async function fetchAttacks(pokemonName) {
     }
     
     const attacks = await response.json();
-    console.log(attacks)
     return attacks;
 }

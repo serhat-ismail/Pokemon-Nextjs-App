@@ -16,12 +16,17 @@
     margin: 2px;
 }
 
-.attacks button :hover{
+.attacks .activeButton :hover{
     background-color: #AAAAAA;
 }
 
 .attacks .fire{
     background-color: red;
+}
+
+.attacks table {
+    display: flex;
+    justify-content: center;
 }
 
 /* .attacks button :hover .fire{
@@ -39,9 +44,3 @@
 .attacks button :hover .fire{
     background-color: red;
 } */
-
-.attacks .attack {
-    font-family: Arial, Helvetica, sans-serif;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
